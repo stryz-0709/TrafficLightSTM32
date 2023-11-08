@@ -19,8 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "software_timer.h"
-#include "global.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -57,20 +56,7 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int timer0_counter = 0;
-int timer0_flag = 0;
-int TIMER_CYCLE = 10;
-void setTimer0(int duration){
-	timer0_counter = duration/TIMER_CYCLE;
-	timer0_flag = 0;
-}
 
-void timer_run(){
-	if (timer0_counter > 0){
-		timer0_counter--;
-		if (timer0_counter == 0) timer0_flag = 1;
-	}
-}
 /* USER CODE END 0 */
 
 /**
@@ -103,7 +89,7 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT(&htim2);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -111,7 +97,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  fsm_manual_run();
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -259,13 +245,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	timerRun();
-	getKeyInput(0);
-	getKeyInput(1);
-	getKeyInput(2);
-	getKeyInput(3);
-}
+
 /* USER CODE END 4 */
 
 /**

@@ -1,0 +1,37 @@
+Removed Pin From Net: NetName=EN2 Pin=U1-A5_1
+Removed Pin From Net: NetName=EN3 Pin=U1-A5_2
+Removed Pin From Net: NetName=EN4 Pin=U1-A5_3
+Removed Pin From Net: NetName=BUTTON1 Pin=U1-A5_4
+Removed Pin From Net: NetName=BUTTON2 Pin=U1-A5_5
+Removed Pin From Net: NetName=BUTTON3 Pin=U1-A5_6
+Removed Pin From Net: NetName=BUTTON4 Pin=U1-A5_9
+Removed Pin From Net: NetName=BIT0 Pin=U1-A9_1
+Removed Pin From Net: NetName=BIT1 Pin=U1-A9_2
+Removed Pin From Net: NetName=BIT2 Pin=U1-A9_3
+Removed Pin From Net: NetName=BIT3 Pin=U1-A9_4
+Removed Pin From Net: NetName=BIT4 Pin=U1-A9_5
+Removed Pin From Net: NetName=BIT5 Pin=U1-A9_6
+Removed Pin From Net: NetName=BIT6 Pin=U1-A9_7
+Removed Pin From Net: NetName=EN1 Pin=U1-A9_8
+Added Pin To Net: NetName=BIT4 Pin=U1-A5_1
+Added Pin To Net: NetName=BIT5 Pin=U1-A5_2
+Added Pin To Net: NetName=BIT6 Pin=U1-A5_3
+Added Pin To Net: NetName=EN1 Pin=U1-A5_4
+Added Pin To Net: NetName=EN2 Pin=U1-A5_5
+Added Pin To Net: NetName=EN3 Pin=U1-A5_6
+Added Pin To Net: NetName=EN4 Pin=U1-A5_9
+Added Pin To Net: NetName=BUTTON1 Pin=U1-A9_1
+Added Pin To Net: NetName=BUTTON2 Pin=U1-A9_2
+Added Pin To Net: NetName=BUTTON3 Pin=U1-A9_3
+Added Pin To Net: NetName=BUTTON4 Pin=U1-A9_4
+Added Pin To Net: NetName=BIT0 Pin=U1-A9_5
+Added Pin To Net: NetName=BIT1 Pin=U1-A9_6
+Added Pin To Net: NetName=BIT2 Pin=U1-A9_7
+Added Pin To Net: NetName=BIT3 Pin=U1-A9_8
+Change Net Name : Old Net Name=BIT0 New Net Name=SEG0
+Change Net Name : Old Net Name=BIT1 New Net Name=SEG1
+Change Net Name : Old Net Name=BIT2 New Net Name=SEG2
+Change Net Name : Old Net Name=BIT3 New Net Name=SEG3
+Change Net Name : Old Net Name=BIT4 New Net Name=SEG4
+Change Net Name : Old Net Name=BIT5 New Net Name=SEG5
+Change Net Name : Old Net Name=BIT6 New Net Name=SEG6

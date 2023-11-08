@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=R1 NewDesignator=R2
+Change Component Designator: OldDesignator=R2 NewDesignator=R1
+Added Member To Class: ClassName=SCH_TrafficLight Member=Component D13 SM410563N
+Added Member To Class: ClassName=SCH_TrafficLight Member=Component D14 SM410563N

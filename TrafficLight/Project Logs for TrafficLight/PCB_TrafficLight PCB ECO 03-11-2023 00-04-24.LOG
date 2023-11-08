@@ -1,0 +1,25 @@
+Change Component Footprint: Designator=D1 Old Footprint=LED 10MM - GREEN New Footprint=LED 3MM - green
+Change Component Footprint: Designator=D4 Old Footprint=LED 10MM - GREEN New Footprint=LED 3MM - green
+Change Component Footprint: Designator=D7 Old Footprint=LED 10MM - GREEN New Footprint=LED 3MM - green
+Change Component Footprint: Designator=D10 Old Footprint=LED 10MM - GREEN New Footprint=LED 3MM - green
+Change Component Footprint: Designator=D3 Old Footprint=LED 10MM - RED New Footprint=LED 3MM - red
+Change Component Footprint: Designator=D6 Old Footprint=LED 10MM - RED New Footprint=LED 3MM - red
+Change Component Footprint: Designator=D9 Old Footprint=LED 10MM - RED New Footprint=LED 3MM - red
+Change Component Footprint: Designator=D12 Old Footprint=LED 10MM - RED New Footprint=LED 3MM - red
+Change Component Footprint: Designator=D2 Old Footprint=LED 10MM - YELLOW New Footprint=LED 3MM - yellow
+Change Component Footprint: Designator=D5 Old Footprint=LED 10MM - YELLOW New Footprint=LED 3MM - yellow
+Change Component Footprint: Designator=D8 Old Footprint=LED 10MM - YELLOW New Footprint=LED 3MM - yellow
+Change Component Footprint: Designator=D11 Old Footprint=LED 10MM - YELLOW New Footprint=LED 3MM - yellow
+Change Component Comment : Designator=D1 Old Comment=LED GREEN New Comment=Led
+Change Component Comment : Designator=D4 Old Comment=LED GREEN New Comment=Led
+Change Component Comment : Designator=D7 Old Comment=LED GREEN New Comment=Led
+Change Component Comment : Designator=D10 Old Comment=LED GREEN New Comment=Led
+Change Component Comment : Designator=D3 Old Comment=LED RED New Comment=Led
+Change Component Comment : Designator=D6 Old Comment=LED RED New Comment=Led
+Change Component Comment : Designator=D9 Old Comment=LED RED New Comment=Led
+Change Component Comment : Designator=D12 Old Comment=LED RED New Comment=Led
+Change Component Comment : Designator=D2 Old Comment=LED YELLOW New Comment=Led
+Change Component Comment : Designator=D5 Old Comment=LED YELLOW New Comment=Led
+Change Component Comment : Designator=D8 Old Comment=LED YELLOW New Comment=Led
+Change Component Comment : Designator=D11 Old Comment=LED YELLOW New Comment=Led
+Added Room: Name=SCH_TrafficLight

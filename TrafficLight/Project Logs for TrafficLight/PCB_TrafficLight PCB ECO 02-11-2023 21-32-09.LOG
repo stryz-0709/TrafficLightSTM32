@@ -1,0 +1,37 @@
+Added Component: Designator=D13(LED/7SEG/0.56)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=D14(LED/7SEG/0.56)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD13_1 Pin=D13-1
+Added Pin To Net: NetName=NetD13_2 Pin=D13-2
+Added Pin To Net: NetName=GND Pin=D13-3
+Added Pin To Net: NetName=NetD13_4 Pin=D13-4
+Added Pin To Net: NetName=NetD13_6 Pin=D13-6
+Added Pin To Net: NetName=NetD13_7 Pin=D13-7
+Added Pin To Net: NetName=GND Pin=D13-8
+Added Pin To Net: NetName=NetD13_9 Pin=D13-9
+Added Pin To Net: NetName=NetD13_10 Pin=D13-10
+Added Pin To Net: NetName=NetD14_1 Pin=D14-1
+Added Pin To Net: NetName=NetD14_2 Pin=D14-2
+Added Pin To Net: NetName=GND Pin=D14-3
+Added Pin To Net: NetName=NetD14_4 Pin=D14-4
+Added Pin To Net: NetName=GND Pin=D14-5
+Added Pin To Net: NetName=NetD14_6 Pin=D14-6
+Added Pin To Net: NetName=NetD14_7 Pin=D14-7
+Added Pin To Net: NetName=GND Pin=D14-8
+Added Pin To Net: NetName=NetD14_9 Pin=D14-9
+Added Pin To Net: NetName=NetD14_10 Pin=D14-10
+Added Member To Class: ClassName=SCH_TrafficLight Member=Component D13 SM410563N
+Added Member To Class: ClassName=SCH_TrafficLight Member=Component D14 SM410563N

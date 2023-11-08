@@ -10,8 +10,7 @@
 void fsm_automatic_run(int lane){
 	if (timer_counter[lane] % 100 == 0){
 		int remaining_time = timer_counter[lane] / 100;
-		display7SEG(lane*2, remaining_time % 10);
-		display7SEG(lane*2+1, (int) (remaining_time / 10));
+		if (lane == 0) display7SEG(remaining_time % 10);
 	}
 	switch(LED_STATE[lane]){
 		case INIT_STATE:
@@ -20,7 +19,7 @@ void fsm_automatic_run(int lane){
 				LED_STATE[lane] = RED_STATE;
 				setTimer(lane, RED_DURATION*100);
 			}
-			else{
+			else if (lane == 1){
 				LED_STATE[lane] = GREEN_STATE;
 				setTimer(lane, GREEN_DURATION*100);
 			}

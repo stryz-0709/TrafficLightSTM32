@@ -1,8 +1,9 @@
 ../Core/Src/fsm_manual.c:15:6:manualPlus	2
 ../Core/Src/fsm_manual.c:21:6:manualMinus	2
 ../Core/Src/fsm_manual.c:28:6:changeMode	1
-../Core/Src/fsm_manual.c:52:6:changeDuration	2
-../Core/Src/fsm_manual.c:62:6:toggle	1
-../Core/Src/fsm_manual.c:69:6:displayCountdown	2
-../Core/Src/fsm_manual.c:78:6:checkDuration	8
-../Core/Src/fsm_manual.c:93:6:fsm_manual_run	21
+../Core/Src/fsm_manual.c:52:6:increaseDuration	2
+../Core/Src/fsm_manual.c:60:6:decreaseDuration	2
+../Core/Src/fsm_manual.c:70:6:toggle	1
+../Core/Src/fsm_manual.c:77:6:displayCountdown	2
+../Core/Src/fsm_manual.c:86:6:checkDuration	8
+../Core/Src/fsm_manual.c:101:6:fsm_manual_run	25

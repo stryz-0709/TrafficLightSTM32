@@ -56,20 +56,6 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int timer0_counter = 0;
-int timer0_flag = 0;
-int TIMER_CYCLE = 10;
-void setTimer0(int duration){
-	timer0_counter = duration/TIMER_CYCLE;
-	timer0_flag = 0;
-}
-
-void timer_run(){
-	if (timer0_counter > 0){
-		timer0_counter--;
-		if (timer0_counter == 0) timer0_flag = 1;
-	}
-}
 
 void updateTimer(void) {
 	timerRun(0);
@@ -122,22 +108,33 @@ int main(void)
   setTrafficLight(0, OFF);
   setTrafficLight(1, OFF);
   display7SEG(OFF);
+  int i = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//	  fsm_manual_run();
-//	  fsm_auto_run(0);
-//	  fsm_auto_run(1);
-
-	  if (isButtonPressed(0))
-		  toggleLight(0, RED);
-	  if (isButtonPressed(1))
-		  toggleLight(0, GREEN);
-	  if (isButtonPressed(2))
-		  toggleLight(0, AMBER);
+	  fsm_manual_run();
+	  fsm_auto_run(0);
+	  fsm_auto_run(1);
+//	  if (isButtonPressed(1)){
+//		  display7SEG(i);
+//		  i++;
+//		  if (i >= 10) i = 0;
+//	  }
+//	  display7SEG(OFF);
+//	  HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin,
+//	  			  HAL_GPIO_ReadPin(BTN1_GPIO_Port, BTN1_Pin));
+//	  HAL_GPIO_WritePin(AMBER2_GPIO_Port, AMBER2_Pin,
+//	  	  			  HAL_GPIO_ReadPin(BTN2_GPIO_Port, BTN2_Pin));
+//	  HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin,
+//	  	  			  HAL_GPIO_ReadPin(BTN3_GPIO_Port, BTN3_Pin));
+//	  HAL_GPIO_WritePin(RED2_GPIO_Port, RED2_Pin,
+//	  	  			  HAL_GPIO_ReadPin(BTN4_GPIO_Port, BTN4_Pin));
+//	  if (isButtonPressed(1)) display7SEG(2);
+//	  if (isButtonPressed(2)) display7SEG(3);
+//	  if (isButtonPressed(3)) display7SEG(4);
   }
     /* USER CODE END WHILE */
 

@@ -10,29 +10,29 @@
 uint16_t REDLIGHT [2] = {RED1_Pin, RED2_Pin};
 uint16_t GREENLIGHT [2] = {GREEN1_Pin, GREEN2_Pin};
 uint16_t AMBERLIGHT [2] = {AMBER1_Pin, AMBER2_Pin};
-GPIO_TypeDef *GPIO [6] = {GPIOB, GPIOC, GPIOC, GPIOA, GPIOA, GPIOA};
+GPIO_TypeDef * GPIO_Port [6] = {GPIOB, GPIOC, GPIOC, GPIOA, GPIOA, GPIOA};
 
 void setTrafficLight(int lane, int light){
 	switch(light){
 	case RED:
-		HAL_GPIO_WritePin(GPIO[lane*3], REDLIGHT[lane], RESET);
-		HAL_GPIO_WritePin(GPIO[lane*3+1], GREENLIGHT[lane], SET);
-		HAL_GPIO_WritePin(GPIO[lane*3+2], AMBERLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3], REDLIGHT[lane], RESET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3+1], GREENLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3+2], AMBERLIGHT[lane], SET);
 		break;
 	case AMBER:
-		HAL_GPIO_WritePin(GPIO[lane*3], REDLIGHT[lane], SET);
-		HAL_GPIO_WritePin(GPIO[lane*3+1], GREENLIGHT[lane], SET);
-		HAL_GPIO_WritePin(GPIO[lane*3+2], AMBERLIGHT[lane], RESET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3], REDLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3+1], GREENLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3+2], AMBERLIGHT[lane], RESET);
 		break;
 	case GREEN:
-		HAL_GPIO_WritePin(GPIO[lane*3], REDLIGHT[lane], SET);
-		HAL_GPIO_WritePin(GPIO[lane*3+1], GREENLIGHT[lane], RESET);
-		HAL_GPIO_WritePin(GPIO[lane*3+2], AMBERLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3], REDLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3+1], GREENLIGHT[lane], RESET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3+2], AMBERLIGHT[lane], SET);
 		break;
 	case OFF:
-		HAL_GPIO_WritePin(GPIO[lane*3], REDLIGHT[lane], SET);
-		HAL_GPIO_WritePin(GPIO[lane*3+1], GREENLIGHT[lane], SET);
-		HAL_GPIO_WritePin(GPIO[lane*3+2], AMBERLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3], REDLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3+1], GREENLIGHT[lane], SET);
+		HAL_GPIO_WritePin(GPIO_Port[lane*3+2], AMBERLIGHT[lane], SET);
 		break;
 	default:
 		break;
@@ -43,19 +43,19 @@ void setTrafficLight(int lane, int light){
 void toggleLight(int lane, int light){
 	switch (light){
 		case RED:
-			HAL_GPIO_TogglePin(GPIO[lane*3], REDLIGHT[lane]);
-			HAL_GPIO_WritePin(GPIO[lane*3+1], GREENLIGHT[lane], SET);
-			HAL_GPIO_WritePin(GPIO[lane*3+2], AMBERLIGHT[lane], SET);
+			HAL_GPIO_TogglePin(GPIO_Port[lane*3], REDLIGHT[lane]);
+			HAL_GPIO_WritePin(GPIO_Port[lane*3+1], GREENLIGHT[lane], SET);
+			HAL_GPIO_WritePin(GPIO_Port[lane*3+2], AMBERLIGHT[lane], SET);
 			break;
 		case AMBER:
-			HAL_GPIO_WritePin(GPIO[lane*3], REDLIGHT[lane], SET);
-			HAL_GPIO_WritePin(GPIO[lane*3+1], GREENLIGHT[lane], SET);
-			HAL_GPIO_TogglePin(GPIO[lane*3+2], AMBERLIGHT[lane]);
+			HAL_GPIO_WritePin(GPIO_Port[lane*3], REDLIGHT[lane], SET);
+			HAL_GPIO_WritePin(GPIO_Port[lane*3+1], GREENLIGHT[lane], SET);
+			HAL_GPIO_TogglePin(GPIO_Port[lane*3+2], AMBERLIGHT[lane]);
 			break;
 		case GREEN:
-			HAL_GPIO_WritePin(GPIO[lane*3], REDLIGHT[lane], SET);
-			HAL_GPIO_TogglePin(GPIO[lane*3+1], GREENLIGHT[lane]);
-			HAL_GPIO_WritePin(GPIO[lane*3+2], AMBERLIGHT[lane], SET);
+			HAL_GPIO_WritePin(GPIO_Port[lane*3], REDLIGHT[lane], SET);
+			HAL_GPIO_TogglePin(GPIO_Port[lane*3+1], GREENLIGHT[lane]);
+			HAL_GPIO_WritePin(GPIO_Port[lane*3+2], AMBERLIGHT[lane], SET);
 			break;
 		default:
 			break;

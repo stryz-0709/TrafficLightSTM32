@@ -49,9 +49,17 @@ void changeMode(int mode, int duration, int ledMode){
 
 
 //Increment duration
-void changeDuration(int mode){
+void increaseDuration(int mode){
 	tempDuration++;
 	if (tempDuration == 10) tempDuration = 1;
+
+	//Display duration
+	display7SEG(tempDuration);
+}
+
+void decreaseDuration(int mode){
+	tempDuration--;
+	if (tempDuration == 0) tempDuration = 9;
 
 	//Display duration
 	display7SEG(tempDuration);
@@ -94,23 +102,24 @@ void fsm_manual_run(){
 	switch(TRAFFIC_MODE){
 		case AUTO:
 			displayCountdown();
-//			if (isButtonPressed(0)){
-//				changeMode(MANUAL, 0, INIT);
-//				display7SEG(USER);
-//			}
+			if (isButtonPressed(0)){
+				changeMode(MANUAL, 0, INIT);
+				display7SEG(USER);
+			}
 			break;
 
 		case MANUAL:
 			//Change mode
 			if (isButtonPressed(0)){
 				changeMode(RED, RED_DURATION, OFF);
+				display7SEG(RED_DURATION);
 			}
 
-			if (isButtonPressed(1)){
+			if (isButtonPressed(2)){
 				manualPlus(0);
 				manualPlus(1);
 			}
-			if (isButtonPressed(2)){
+			if (isButtonPressed(3)){
 				manualMinus(0);
 				manualMinus(1);
 			}
@@ -118,13 +127,18 @@ void fsm_manual_run(){
 
 		case RED:
 			//Change mode
-			if (isButtonPressed(0)) changeMode(AMBER, AMBER_DURATION, OFF);
+			if (isButtonPressed(0)){
+				changeMode(AMBER, AMBER_DURATION, OFF);
+				display7SEG(AMBER_DURATION);
+			}
 
 			//Change duration
-			if (isButtonPressed(1))	changeDuration(RED);
+			if (isButtonPressed(3)) increaseDuration(RED);
+
+			if (isButtonPressed(2)) decreaseDuration(RED);
 
 			//Save duration
-			if (isButtonPressed(2)){
+			if (isButtonPressed(1)){
 				RED_DURATION = tempDuration;
 				checkDuration(RED);
 			}
@@ -135,13 +149,18 @@ void fsm_manual_run(){
 
 		case AMBER:
 			//Change mode
-			if (isButtonPressed(0)) changeMode(GREEN, GREEN_DURATION, OFF);
+			if (isButtonPressed(0)){
+				changeMode(GREEN, GREEN_DURATION, OFF);
+				display7SEG(GREEN_DURATION);
+			}
 
 			//Change duration
-			if (isButtonPressed(1))	changeDuration(AMBER);
+			if (isButtonPressed(3))	increaseDuration(AMBER);
+
+			if (isButtonPressed(2))	decreaseDuration(AMBER);
 
 			//Save duration
-			if (isButtonPressed(2)){
+			if (isButtonPressed(1)){
 				AMBER_DURATION = tempDuration;
 				checkDuration(AMBER);
 			}
@@ -152,13 +171,16 @@ void fsm_manual_run(){
 
 		case GREEN:
 			//Change mode
-			if (isButtonPressed(0))	changeMode(AUTO, 0, INIT);
+			if (isButtonPressed(0)) changeMode(AUTO, 0, INIT);
 
 			//Change duration
-			if (isButtonPressed(1)) changeDuration(GREEN);
+			if (isButtonPressed(3)) increaseDuration(GREEN);
+
+			if (isButtonPressed(2)) decreaseDuration(GREEN);
+
 
 			//Save duration
-			if (isButtonPressed(2)){
+			if (isButtonPressed(1)){
 				GREEN_DURATION = tempDuration;
 				checkDuration(GREEN);
 			}
